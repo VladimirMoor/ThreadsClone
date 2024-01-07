@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Need to edit some stuff
+
 struct ProfileView: View {
 	@State private var selectedFilter: ProfileThreadFilter = .threads
 	@Namespace var animation
