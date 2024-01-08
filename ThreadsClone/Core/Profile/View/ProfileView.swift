@@ -61,6 +61,7 @@ struct ProfileView: View {
 								Text(filter.title)
 									.font(.subheadline)
 									.fontWeight(selectedFilter == filter ? .semibold : .regular)
+									//disable animation to the font weight
 									.transaction { transaction in
 										transaction.animation = nil
 									}

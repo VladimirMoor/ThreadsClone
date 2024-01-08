@@ -24,6 +24,7 @@
 		317248F82B496D8D00758348 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317248F72B496D8D00758348 /* CircularProfileImageView.swift */; };
 		317248FA2B496E5000758348 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317248F92B496E5000758348 /* UserCell.swift */; };
 		31A5F4942B4AB5DB002052B9 /* ProfileThreadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5F4932B4AB5DA002052B9 /* ProfileThreadFilter.swift */; };
+		31A5F4982B4BD62B002052B9 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5F4972B4BD62B002052B9 /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		317248F72B496D8D00758348 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		317248F92B496E5000758348 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		31A5F4932B4AB5DA002052B9 /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
+		31A5F4972B4BD62B002052B9 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		31029B5F2B46AC9A00F32A66 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				31A5F4952B4BD5BA002052B9 /* EditProfile */,
 				31A5F4922B4AB5B6002052B9 /* Model */,
 				31029B612B46ACA700F32A66 /* View */,
 			);
@@ -288,6 +291,22 @@
 				31A5F4932B4AB5DA002052B9 /* ProfileThreadFilter.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		31A5F4952B4BD5BA002052B9 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				31A5F4962B4BD610002052B9 /* View */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		31A5F4962B4BD610002052B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31A5F4972B4BD62B002052B9 /* EditProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +381,7 @@
 			files = (
 				31029B522B46AB2200F32A66 /* FeedView.swift in Sources */,
 				31029B4B2B469E6600F32A66 /* UmbrellaTextFieldModifier.swift in Sources */,
+				31A5F4982B4BD62B002052B9 /* EditProfileView.swift in Sources */,
 				31029B5A2B46ABE700F32A66 /* CreateThreadView.swift in Sources */,
 				317248F52B493D4E00758348 /* ThreadCell.swift in Sources */,
 				31029B5E2B46AC7500F32A66 /* ActivityView.swift in Sources */,
