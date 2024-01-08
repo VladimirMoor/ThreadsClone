@@ -9,7 +9,8 @@ import SwiftUI
 
 struct UmbrellaTabView: View {
 	@State private var selectedTab = 0
-	
+	@State private var showCreateThread = false
+	@State private var oldValueSelectedTab = 0
     var body: some View {
 		TabView(selection: $selectedTab) {
 			FeedView()
@@ -25,7 +26,7 @@ struct UmbrellaTabView: View {
 				}
 				.tag(1)
 			
-			CreateThreadView()
+			Color.clear
 				.tabItem {
 					Image(systemName: "plus")
 				}
@@ -45,10 +46,21 @@ struct UmbrellaTabView: View {
 				}
 				.tag(4)
 		}
+		.onChange(of: selectedTab, { oldValue, newValue in
+			showCreateThread = (newValue == 2)
+			oldValueSelectedTab = oldValue
+		})
+		.sheet(isPresented: $showCreateThread, onDismiss: {
+			selectedTab = oldValueSelectedTab
+		}, content: {
+			CreateThreadView()
+		})
 		.tint(.black)
     }
 }
 
 #Preview {
-    UmbrellaTabView()
+	NavigationStack {
+		UmbrellaTabView()
+	}
 }

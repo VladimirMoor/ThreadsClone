@@ -23,14 +23,14 @@ struct FeedView: View {
 			.scrollIndicators(.hidden)
 			.navigationTitle("Umbrellas")
 			.navigationBarTitleDisplayMode(.inline)
-		}
-		.toolbar {
-			ToolbarItem(placement: .navigationBarTrailing) {
-				Button {
-					
-				} label: {
-					Image(systemName: "arrow.counterclockwise")
-						.foregroundStyle(Color.black)
+			.toolbar {
+				ToolbarItem(placement: .topBarTrailing) {
+					Button {
+	
+					} label: {
+						Image(systemName: "arrow.counterclockwise")
+							.foregroundStyle(Color.black)
+					}
 				}
 			}
 		}
