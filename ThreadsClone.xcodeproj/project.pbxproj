@@ -22,6 +22,8 @@
 		31029B632B46ACB200F32A66 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31029B622B46ACB200F32A66 /* ProfileView.swift */; };
 		3104D1CE2B526A0F00335602 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */; };
 		3104D1D02B526B7000335602 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1CF2B526B7000335602 /* AuthService.swift */; };
+		3104D1D42B527AE200335602 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1D32B527AE200335602 /* ContentViewModel.swift */; };
+		3104D1D62B52884800335602 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1D52B52884800335602 /* LoginViewModel.swift */; };
 		312190082B5037C4003EA4C5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 312190072B5037C4003EA4C5 /* FirebaseAuth */; };
 		3121900A2B5037F2003EA4C5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 312190092B5037F2003EA4C5 /* FirebaseFirestore */; };
 		3121900C2B5037F2003EA4C5 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3121900B2B5037F2003EA4C5 /* FirebaseFirestoreSwift */; };
@@ -51,6 +53,8 @@
 		31029B622B46ACB200F32A66 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3104D1CF2B526B7000335602 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3104D1D32B527AE200335602 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		3104D1D52B52884800335602 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		317248F42B493D4E00758348 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		317248F72B496D8D00758348 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		317248F92B496E5000758348 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -181,7 +185,8 @@
 		31029B432B46927700F32A66 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				31029B302B46915F00F32A66 /* ContentView.swift */,
+				3104D1D22B527AB700335602 /* ViewModel */,
+				3104D1D12B527AB000335602 /* View */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */,
+				3104D1D52B52884800335602 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -308,6 +314,22 @@
 				3104D1CF2B526B7000335602 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3104D1D12B527AB000335602 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31029B302B46915F00F32A66 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3104D1D22B527AB700335602 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3104D1D32B527AE200335602 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		312190062B5037C4003EA4C5 /* Frameworks */ = {
@@ -438,10 +460,12 @@
 				31029B5A2B46ABE700F32A66 /* CreateThreadView.swift in Sources */,
 				317248F52B493D4E00758348 /* ThreadCell.swift in Sources */,
 				31029B5E2B46AC7500F32A66 /* ActivityView.swift in Sources */,
+				3104D1D62B52884800335602 /* LoginViewModel.swift in Sources */,
 				317248F82B496D8D00758348 /* CircularProfileImageView.swift in Sources */,
 				317248FA2B496E5000758348 /* UserCell.swift in Sources */,
 				31029B462B4692B300F32A66 /* LoginView.swift in Sources */,
 				31A5F4942B4AB5DB002052B9 /* ProfileThreadFilter.swift in Sources */,
+				3104D1D42B527AE200335602 /* ContentViewModel.swift in Sources */,
 				31029B4E2B46A63900F32A66 /* UmbrellaTabView.swift in Sources */,
 				31029B312B46915F00F32A66 /* ContentView.swift in Sources */,
 				31029B2F2B46915F00F32A66 /* ThreadsCloneApp.swift in Sources */,
