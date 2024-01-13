@@ -9,8 +9,14 @@ import SwiftUI
 // need to edit
 
 struct ProfileView: View {
+	@StateObject var viewModel = ProfileViewModel()
 	@State private var selectedFilter: ProfileThreadFilter = .threads
 	@Namespace var animation
+	
+	private var currentUser: User? {
+		return viewModel.currentUser
+	}
+	
     var body: some View {
 		NavigationStack {
 			ScrollView {
@@ -20,15 +26,17 @@ struct ProfileView: View {
 						VStack(alignment: .leading, spacing: 12) {
 							// fullname and username
 							VStack(alignment: .leading , spacing: 4) {
-								Text("Aizac Ibrghimovich")
+								Text(currentUser?.fullname ?? "")
 									.font(.title2)
 									.fontWeight(.semibold)
 								
-								Text("aizac_the_best")
+								Text(currentUser?.username ?? "")
 									.font(.subheadline)
 							}
 							
-							Text("Some long bio where user is describe himself and who is he as he think. Maybe some long text and we need to restrict it with some limits to the words number at least.")
+							if let bio = currentUser?.bio {
+								Text(bio)
+							}
 							
 							Text("2 followers")
 								.font(.caption)

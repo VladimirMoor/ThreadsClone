@@ -35,6 +35,7 @@ struct RegistrationView: View {
 				.modifier(UmbrellaTextFieldModifier())
 			
 			TextField("Enter your username", text: $viewModel.username)
+				.textInputAutocapitalization(.never)
 				.modifier(UmbrellaTextFieldModifier())
 			
 			Button {
