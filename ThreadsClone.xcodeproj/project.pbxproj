@@ -20,6 +20,8 @@
 		31029B5A2B46ABE700F32A66 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31029B592B46ABE700F32A66 /* CreateThreadView.swift */; };
 		31029B5E2B46AC7500F32A66 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31029B5D2B46AC7500F32A66 /* ActivityView.swift */; };
 		31029B632B46ACB200F32A66 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31029B622B46ACB200F32A66 /* ProfileView.swift */; };
+		3104D1CE2B526A0F00335602 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */; };
+		3104D1D02B526B7000335602 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104D1CF2B526B7000335602 /* AuthService.swift */; };
 		312190082B5037C4003EA4C5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 312190072B5037C4003EA4C5 /* FirebaseAuth */; };
 		3121900A2B5037F2003EA4C5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 312190092B5037F2003EA4C5 /* FirebaseFirestore */; };
 		3121900C2B5037F2003EA4C5 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3121900B2B5037F2003EA4C5 /* FirebaseFirestoreSwift */; };
@@ -47,6 +49,8 @@
 		31029B592B46ABE700F32A66 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		31029B5D2B46AC7500F32A66 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		31029B622B46ACB200F32A66 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3104D1CF2B526B7000335602 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		317248F42B493D4E00758348 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		317248F72B496D8D00758348 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		317248F92B496E5000758348 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		31029B422B46925E00F32A66 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				3104D1CC2B5269A800335602 /* Service */,
+				3104D1CB2B52699B00335602 /* ViewModel */,
 				31029B442B46929D00F32A66 /* Views */,
 			);
 			path = Authentication;
@@ -286,6 +292,22 @@
 				31029B622B46ACB200F32A66 /* ProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3104D1CB2B52699B00335602 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3104D1CD2B526A0F00335602 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3104D1CC2B5269A800335602 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3104D1CF2B526B7000335602 /* AuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		312190062B5037C4003EA4C5 /* Frameworks */ = {
@@ -409,7 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				31029B522B46AB2200F32A66 /* FeedView.swift in Sources */,
+				3104D1CE2B526A0F00335602 /* RegistrationViewModel.swift in Sources */,
 				31029B4B2B469E6600F32A66 /* UmbrellaTextFieldModifier.swift in Sources */,
+				3104D1D02B526B7000335602 /* AuthService.swift in Sources */,
 				31A5F4982B4BD62B002052B9 /* EditProfileView.swift in Sources */,
 				31029B5A2B46ABE700F32A66 /* CreateThreadView.swift in Sources */,
 				317248F52B493D4E00758348 /* ThreadCell.swift in Sources */,
