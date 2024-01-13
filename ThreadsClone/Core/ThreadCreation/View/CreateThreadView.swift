@@ -39,6 +39,7 @@ struct CreateThreadView: View {
 				
 				Spacer()
 			}
+			.padding()
 			.navigationTitle("New Thread")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
