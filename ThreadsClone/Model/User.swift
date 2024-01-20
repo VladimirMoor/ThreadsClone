@@ -12,7 +12,7 @@ struct User: Identifiable, Codable, Hashable {
 	let fullname: String
 	let email: String
 	let username: String
-	var profileImageURL: String?
+	var profileImageUrl: String?
 	var bio: String?
 	
 	static let mock = User(id: "123", fullname: "Jesica Browen", email: "jess@gmail.com", username: "jess_here")
