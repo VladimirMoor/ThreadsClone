@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct EditProfileView: View {
 	@State private var bio = ""
 	@State private var link = ""
 	@State private var isPrivateProfile = false
+	@Environment(\.dismiss) var dismiss
+	@StateObject var viewModel = EditProfileViewModel()
 	var body: some View {
 		NavigationStack {
 			ZStack {
@@ -30,7 +33,17 @@ struct EditProfileView: View {
 						
 						Spacer()
 						
-						CircularProfileImageView()
+						PhotosPicker(selection: $viewModel.selectedItem) {
+							if let image = viewModel.profileImage {
+								image
+									.resizable()
+									.scaledToFill()
+									.frame(width: 40, height: 40)
+									.clipShape(.circle)
+							} else {
+								CircularProfileImageView()
+							}
+						}
 					}
 					
 					Divider()
@@ -66,28 +79,31 @@ struct EditProfileView: View {
 				}
 				.padding()
 			}
-			
-		}
-		.navigationTitle("Edit Profile")
-		.navigationBarTitleDisplayMode(.inline)
-		.toolbar {
-			ToolbarItem(placement: .topBarLeading) {
-				Button("Cancel") {
-					
+			.navigationTitle("Edit Profile")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .topBarLeading) {
+					Button("Cancel") {
+						dismiss()
+					}
+					.font(.subheadline)
+					.foregroundStyle(.black)
 				}
-				.font(.subheadline)
-				.foregroundStyle(.black)
-			}
-			
-			ToolbarItem(placement: .topBarTrailing) {
-				Button("Done") {
-					
+				
+				ToolbarItem(placement: .topBarTrailing) {
+					Button("Done") {
+						Task {
+							try await viewModel.updateUserData()
+							dismiss()
+						}
+					}
+					.font(.subheadline)
+					.fontWeight(.semibold)
+					.foregroundStyle(.black)
 				}
-				.font(.subheadline)
-				.fontWeight(.semibold)
-				.foregroundStyle(.black)
 			}
 		}
+		
 	}
 }
 
