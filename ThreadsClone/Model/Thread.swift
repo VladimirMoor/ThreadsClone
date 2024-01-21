@@ -20,4 +20,6 @@ struct Thread: Identifiable, Codable {
 	}
 	
 	var user: User?
+	
+	static let mock = Thread(ownerUid: "000", caption: "Mock thread here", timestamp: Timestamp(), likes: 3)
 }
