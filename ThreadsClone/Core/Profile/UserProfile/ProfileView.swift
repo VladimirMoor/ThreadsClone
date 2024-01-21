@@ -31,7 +31,7 @@ struct ProfileView: View {
 				.tint(.black)
 				
 				// user content list view
-				UserContentListView()
+				UserContentListView(user: user)
 			}
 		}
 		.navigationBarTitleDisplayMode(.inline)

@@ -42,7 +42,9 @@ struct CurrentUserProfileView: View {
 					.buttonStyle(.plain)
 
 					// user content list view
-					UserContentListView()
+					if let user = currentUser {
+						UserContentListView(user: user)
+					}
 				}
 				.padding(.horizontal)
 			}

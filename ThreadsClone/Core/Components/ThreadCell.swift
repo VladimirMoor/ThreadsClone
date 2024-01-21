@@ -24,7 +24,7 @@ struct ThreadCell: View {
 						
 						Spacer()
 						
-						Text(thread.timestamp.dateValue().formatted())
+						Text(thread.timestamp.dateValue(), format: .relative(presentation: .named, unitsStyle: .abbreviated))
 							.font(.caption)
 							.foregroundStyle(Color(.systemGray3))
 						
